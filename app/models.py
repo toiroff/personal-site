@@ -1,4 +1,5 @@
 from django.db import models
+from ckeditor.fields import RichTextField
 # Create your models here.
 
 class Skill(models.Model):
@@ -17,7 +18,6 @@ class Social(models.Model):
 class AboutMe(models.Model):
   name = models.CharField(max_length=200)
   short_desc = models.CharField(max_length=5000)
-  description = models.TextField()
   skills = models.ManyToManyField(Skill,related_name='skills')
   socials = models.ManyToManyField(Social,related_name='socials')
   image = models.ImageField(null=True)
@@ -38,7 +38,7 @@ class Contact(models.Model):
 class Project(models.Model):
   name = models.CharField(max_length=200)
   about = models.TextField()
-  overview = models.TextField()
+  overview = RichTextField()
   live_link = models.URLField(null=True,blank=True)
   link = models.URLField(null=True,blank=True)
   image = models.ImageField(upload_to='projects/')

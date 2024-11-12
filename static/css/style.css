@@ -32,6 +32,8 @@ html {
   @media only screen and (min-width: 112.5em) {
     html {
       font-size: 65%; } }
+ 
+ 
 
 body {
   box-sizing: border-box;
@@ -488,7 +490,7 @@ textarea {
   .project-details__desc-para {
     font-size: 1.8rem;
     line-height: 1.7;
-    color: grey;
+    color: black;
     margin-bottom: 2rem; }
 
 .project-details__tools-used {
